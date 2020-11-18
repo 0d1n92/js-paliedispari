@@ -6,33 +6,34 @@
 // Dichiariamo chi ha vinto.
 var evenOrUneven=prompt("scommettiamo! secondo te la somma verrà pari o dispari?");
 fxControlString(evenOrUneven);
-console.log("scommetti sul:", evenOrUneven);
 var number=parseInt(prompt("inserisci un numero da uno a 5 da sommare con quello del computer"));
+fxControlNumber(number);
 var numberBot= Math.floor(Math.random()*5)+1;
-console.log("il numero del pc: ", numberBot);
 number+=numberBot;
-console.log("la somma dei due numeri è:", number)
 
 var even="dispari"
 if (fxEven(number)){
   even="pari";
 }
-
 var message="perso";
 if(fxComparation(evenOrUneven,even)){
   message="hai vinto"
 }
-console.log(message)
+console.log(message);
 
-
+function fxControlNumber(arg1){
+  var porco=true;
+  while (porco){
+    if(!arg1>1 && !arg1<5){
+    arg1=prompt("inserisci un numero da 1 a 5");
+}else {
+  porco=true;
+  return arg1;
+}
+}
+}
 function fxComparation(arg1, arg2) {return arg1==arg2;}
 function fxEven(arg1){ return number%2==0;}
-
 function fxControlString(arg1){
-  console.log(arg1);
-  while (arg1!="pari" || arg1!="dispari"){
-      arg1=prompt("parametro non coretto scrivere o pari o dispari?");
-      console.log(arg1);
-  }
-  return arg1;
+  while (arg1!="pari" && arg1!="dispari") arg1=prompt("parametro non coretto scrivere o pari o dispari?");
 }
