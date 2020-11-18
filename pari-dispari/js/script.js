@@ -19,11 +19,10 @@ var message="perso";
 if(fxComparation(evenOrUneven,even)){
   message="hai vinto"
 }
-console.log(message);
+document.getElementById('result').innerHTML=message;
 
 function fxControlNumber(arg1){
-
-  while ((arg1>=1)&&(arg1<=5)){
+  while (isNaN(arg1)||arg1<1||arg1>5){
      arg1=prompt("inserisci un numero da 1 a 5");
  }
     return arg1
