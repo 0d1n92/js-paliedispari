@@ -22,5 +22,5 @@ function palindroma(arg1, arg2) {
     arg1=prompt("Attenzione parametro non consentito inserisci una parola");
 
   }
-  return word=arg1;
+    return word=arg1;
  }
