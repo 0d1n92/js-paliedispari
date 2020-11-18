@@ -5,20 +5,34 @@
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione).
 // Dichiariamo chi ha vinto.
 var evenOrUneven=prompt("scommettiamo! secondo te la somma verrà pari o dispari?");
+fxControlString(evenOrUneven);
 console.log("scommetti sul:", evenOrUneven);
 var number=parseInt(prompt("inserisci un numero da uno a 5 da sommare con quello del computer"));
 var numberBot= Math.floor(Math.random()*5)+1;
 console.log("il numero del pc: ", numberBot);
 number+=numberBot;
 console.log("la somma dei due numeri è:", number)
+
 var even="dispari"
 if (fxEven(number)){
-  var even="pari";
+  even="pari";
 }
+
 var message="perso";
 if(fxComparation(evenOrUneven,even)){
   message="hai vinto"
 }
 console.log(message)
+
+
 function fxComparation(arg1, arg2) {return arg1==arg2;}
 function fxEven(arg1){ return number%2==0;}
+
+function fxControlString(arg1){
+  console.log(arg1);
+  while (arg1!="pari" || arg1!="dispari"){
+      arg1=prompt("parametro non coretto scrivere o pari o dispari?");
+      console.log(arg1);
+  }
+  return arg1;
+}
