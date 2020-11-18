@@ -22,16 +22,13 @@ if(fxComparation(evenOrUneven,even)){
 console.log(message);
 
 function fxControlNumber(arg1){
-  var porco=true;
-  while (porco){
-    if(!arg1>1 && !arg1<5){
-    arg1=prompt("inserisci un numero da 1 a 5");
-}else {
-  porco=true;
-  return arg1;
-}
-}
-}
+
+  while ((arg1>=1)&&(arg1<=5)){
+     arg1=prompt("inserisci un numero da 1 a 5");
+ }
+    return arg1
+ }
+
 function fxComparation(arg1, arg2) {return arg1==arg2;}
 function fxEven(arg1){ return number%2==0;}
 function fxControlString(arg1){
