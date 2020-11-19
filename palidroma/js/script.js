@@ -9,19 +9,18 @@ for ( i=word.length-1; i>=0; i-- ){
 }
 
 var message=" non è palindroma";
-if (palindroma(word,control)) message=" è palindroma";
+if (compareWords(word,control)) message=" è palindroma";
 document.getElementById('result').innerHTML= word + message;
 
 // Creare una funzione per capire se la parola inserita è palindroma.
-function palindroma(arg1, arg2) {
-  return arg1==arg2;
-}
+function compareWords(arg1, arg2) { return arg1==arg2; }
 
 //funzioni di controllo
- function fxControl(arg1) {
-  while (arg1=="") {
-    arg1=prompt("Attenzione parametro non consentito inserisci una parola");
+function fxControl(arg1) {
+while (arg1=="") {
 
-  }
-    return word=arg1;
- }
+  arg1=prompt("Attenzione! parametro non consentito inserisci una parola");
+
+}
+  return word=arg1;
+}
