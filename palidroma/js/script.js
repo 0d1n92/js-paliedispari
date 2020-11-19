@@ -1,6 +1,5 @@
 // Palindroma
 // Chiedere all’utente di inserire una parola.
-// Creare una funzione per capire se la parola inserita è palindroma.
 var word=prompt("insirisci una parola per sapere se è palindroma");
 fxControl(word);
 var control="";
@@ -13,7 +12,7 @@ var message=" non è palindroma";
 if (palindroma(word,control)) message=" è palindroma";
 document.getElementById('result').innerHTML= word + message;
 
-
+// Creare una funzione per capire se la parola inserita è palindroma.
 function palindroma(arg1, arg2) {
   return arg1==arg2;
 }
