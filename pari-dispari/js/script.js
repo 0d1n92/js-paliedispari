@@ -22,18 +22,20 @@ if(fxComparation(evenOrUneven,even)){
 }
 document.getElementById('result').innerHTML=message;
 
-function fxControlNumber(arg1){
-  while (isNaN(arg1)||arg1<1||arg1>5){
-     arg1=prompt("inserisci un numero da 1 a 5");
- }
-    return arg1
- }
 
 function fxComparation(arg1, arg2) {return arg1==arg2;} //ritorna vero se la condizione è vera(se hai scritto pari ed è uscito un nuomero pari)
 function fxEven(arg1){ return number%2==0;}//ritorna vero se la condizione è vera
 function fxNumberBot (){
   return Math.floor(Math.random()*5)+1;
 }
+
+//funzioni di controllo
+function fxControlNumber(arg1){
+  while (isNaN(arg1)||arg1<1||arg1>5){
+     arg1=prompt("inserisci un numero da 1 a 5");
+ }
+    return arg1
+ }
 function fxControlString(arg1){
   while (arg1!="pari" && arg1!="dispari") arg1= arg1.toLowerCase(); arg1=prompt("parametro non coretto scrivere o pari o dispari?");
 }

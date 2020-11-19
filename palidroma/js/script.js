@@ -16,6 +16,8 @@ document.getElementById('result').innerHTML= word + message;
 function palindroma(arg1, arg2) {
   return arg1==arg2;
 }
+
+//funzioni di controllo
  function fxControl(arg1) {
   while (arg1=="") {
     arg1=prompt("Attenzione parametro non consentito inserisci una parola");
